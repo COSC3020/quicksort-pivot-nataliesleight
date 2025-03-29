@@ -19,3 +19,7 @@ quantitatively reason with them.
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
+
+I used these links to read up on quicksort pivots: https://launchschool.com/books/advanced_dsa/read/quicksort_pivot_selection
+
+https://stackoverflow.com/questions/7559608/median-of-three-values-strategy 
