@@ -27,9 +27,15 @@ Using the chart from the slides as reference, a table representing a good value 
   - to use mathematically, G will be treated as two values when calculating probability to match the lower probability of n/4
 - H - too high bad pivot, probability of n/4
 
-As G makes up two portions of n/4, it can count as two separate probabilites when computing total possible number of combinations (counts for n/4 to n/2 and n/2 to 3n/4). With 4 options for 3 values, there are $4^3 = 64$ possible combinations (with 2 G's). For there to be a good pivot, only one G must be present in the three values (i.e. LGH, HHG, GLH) as the G will be selected as the median. For 2 options (L or H) for 3 values, there are $2^3 = 8$ possible combinations where G is not present. Out of the total 64 combinations (with 2 G's), 8 of them do not have a G and thus there is a $8/64 = 1/8$ probability that there is not a good pivot in the 3 selected values. Thus, there is a 7n/8 probability that a good pivot will be selected with the median-of-three method.
+As G makes up two portions of n/4, it can count as two separate probabilites when computing total possible number of combinations (counts for n/4 to n/2 and n/2 to 3n/4). With 4 options for 3 values, there are $4^3 = 64$ possible combinations (with 2 G's). For there to be a good pivot, at least one G must be present in the combination and there cannot be two L's or H's. If there are, one of the L's or H's will be selected as the median value (GHH, LLG, etc for bad pivot selections). Examples of combinations that will give good pivots are LHG, GGL, GHG, etc. 
 
-The probability of 7n/8 for median-of-three is much higher thatn the n/2 probability for picking the first element as the pivot.
+For 2 options (L or H) for 3 values, there are $2^3 = 8$ possible combinations where G is not present. 
+
+There are six combinations where there are 2 L's or 2 G's: LLG, LGL, GLL, HHG, HGH, and GHH. Accounting for the two distinct G values, there are 12  in terms of the 64 combinations.
+
+Thus there are $8 + 12 = 20$ combinations out of the total 64 where a good pivot will not be chosen. Thus there are $64 - 20 = 44$ combinations of the 64 where a good pivot can be selected. Then the odds of selecting a good pivot are $44n/64 = 11n/16$. 
+
+The probability of 11n/16 for median-of-three is much higher than the n/2 probability for picking the first element as the pivot, thus giving median-of-three a higher probability of selecting a good pivot than picking the first element. 
 
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
